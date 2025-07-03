@@ -19,6 +19,8 @@ body {
 
 .app {
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .container {
@@ -50,6 +52,21 @@ body {
 }
 
 .nav-logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.nav-logo-text {
   font-size: 1.5rem;
   font-weight: bold;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -531,6 +548,52 @@ body {
 
 .footer-social a:hover {
   transform: scale(1.2);
+}
+
+/* Page Layout Styles */
+.main-content {
+  margin-top: 70px; /* Account for fixed navbar */
+  min-height: calc(100vh - 70px - 80px); /* Full height minus navbar and footer */
+}
+
+.page-content {
+  min-height: calc(100vh - 150px); /* Ensure each page takes full viewport height */
+}
+
+/* Hero section for non-home pages */
+.page-content .hero {
+  min-height: 80vh; /* Slightly smaller for individual pages */
+}
+
+/* Adjust section padding for individual pages */
+.page-content section {
+  padding: 80px 0;
+}
+
+.page-content section:first-child {
+  padding-top: 40px; /* Less padding for first section on pages */
+}
+
+/* Navigation transition improvements */
+.nav-link {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+/* Smooth page transitions */
+.main-content {
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Ensure footer stays at bottom */
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
 }
 
 /* Responsive Design */

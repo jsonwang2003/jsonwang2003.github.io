@@ -2,12 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/png" href="/CW Light.png" id="favicon-light" media="(prefers-color-scheme: light)" />
+    <link rel="icon" type="image/png" href="/CW Dark.png" id="favicon-dark" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" type="image/png" href="/CW Light.png" id="favicon-default" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Modern static website template built with Vite and React" />
     <meta name="keywords" content="web development, react, vite, portfolio, modern design" />
-    <meta name="author" content="Your Name" />
-    <title>Your Website - Modern Web Development</title>
+    <meta name="author" content="Chia-Sheng Wang" />
+    <title>Chia-Sheng Wang</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -15,5 +17,28 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <script>
+      // Dynamic favicon switching based on system theme
+      function updateFavicon() {
+        const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const faviconLight = document.getElementById('favicon-light');
+        const faviconDark = document.getElementById('favicon-dark');
+        const faviconDefault = document.getElementById('favicon-default');
+        
+        if (isDarkMode) {
+          faviconDefault.href = '/CW Dark.png';
+        } else {
+          faviconDefault.href = '/CW Light.png';
+        }
+      }
+      
+      // Set initial favicon
+      updateFavicon();
+      
+      // Listen for theme changes
+      if (window.matchMedia) {
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateFavicon);
+      }
+    </script>
   </body>
 </html>
