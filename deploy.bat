@@ -1,31 +1,13 @@
 @echo off
-echo 🚀 Starting deployment to GitHub Pages...
-
-REM Build the project
-echo 📦 Building project...
-call npm run build
-
-REM Check if build was successful
-if %errorlevel% equ 0 (
-    echo ✅ Build successful!
-    
-    REM Copy built files to root for GitHub Pages
-    echo 📋 Copying files for GitHub Pages...
-    xcopy dist\* . /E /Y
-    
-    REM Add files to git
-    echo 📝 Adding files to git...
-    git add .
-    git commit -m "Deploy to GitHub Pages"
-    
-    REM Push to GitHub
-    echo 🚀 Pushing to GitHub...
-    git push origin main
-    
-    echo ✅ Deployment complete!
-    echo 🌐 Your site will be available at: https://jsonwang2003.github.io
-) else (
-    echo ❌ Build failed. Please check the errors above.
-)
-
+echo ⚠️  NOTICE: GitHub Actions is now handling deployment automatically!
+echo 🤖 When you push to main branch, GitHub Actions will:
+echo    1. Build the project
+echo    2. Deploy to GitHub Pages automatically
+echo.
+echo � You no longer need to run this script manually.
+echo 🌐 Your site will be available at: https://jsonwang2003.github.io
+echo.
+echo ❓ If you want to build locally for testing, run: npm run build
+echo ❓ If you want to preview locally, run: npm run dev
+echo.
 pause
