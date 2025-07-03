@@ -93,6 +93,33 @@ body {
   width: 100%;
 }
 
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.theme-toggle {
+  background: none;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  color: #333;
+}
+
+.theme-toggle:hover {
+  border-color: #667eea;
+  transform: scale(1.1);
+  background: rgba(102, 126, 234, 0.1);
+}
+
 .nav-toggle {
   display: none;
   flex-direction: column;
@@ -501,8 +528,22 @@ body {
     left: 0;
   }
 
+  .nav-actions {
+    order: -1;
+  }
+
+  .theme-toggle {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+  }
+
   .nav-toggle {
     display: flex;
+  }
+
+  body.dark-mode .nav-menu {
+    background-color: #1a1f28;
   }
 
   .hero-title {
@@ -585,4 +626,162 @@ body {
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #0f1419;
+  color: #e6e6e6;
+}
+
+body.dark-mode .navbar {
+  background: rgba(15, 20, 25, 0.95);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .nav-link {
+  color: #e6e6e6;
+}
+
+body.dark-mode .nav-link:hover {
+  color: #667eea;
+}
+
+body.dark-mode .nav-toggle span {
+  background: #e6e6e6;
+}
+
+body.dark-mode .theme-toggle {
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #e6e6e6;
+}
+
+body.dark-mode .theme-toggle:hover {
+  border-color: #667eea;
+  background: rgba(102, 126, 234, 0.2);
+}
+
+body.dark-mode .hero {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+}
+
+body.dark-mode .about {
+  background-color: #151b23;
+}
+
+body.dark-mode .services {
+  background-color: #0f1419;
+}
+
+body.dark-mode .service-card {
+  background: #1a1f28;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+}
+
+body.dark-mode .portfolio {
+  background-color: #151b23;
+}
+
+body.dark-mode .portfolio-item {
+  background: #1a1f28;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .placeholder-image {
+  background: #2a2f38;
+  color: #888;
+}
+
+body.dark-mode .portfolio-tags span {
+  background: rgba(102, 126, 234, 0.2);
+  color: #667eea;
+}
+
+body.dark-mode .contact {
+  background-color: #0f1419;
+}
+
+body.dark-mode .contact-form input,
+body.dark-mode .contact-form textarea {
+  background: #1a1f28;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #e6e6e6;
+}
+
+body.dark-mode .contact-form input:focus,
+body.dark-mode .contact-form textarea:focus {
+  border-color: #667eea;
+  background: #1e242d;
+}
+
+body.dark-mode .contact-form input::placeholder,
+body.dark-mode .contact-form textarea::placeholder {
+  color: #888;
+}
+
+body.dark-mode .footer {
+  background-color: #0a0f14;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Light Mode Styles (explicit for better control) */
+body.light-mode {
+  background-color: #ffffff;
+  color: #333;
+}
+
+body.light-mode .navbar {
+  background: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .nav-link {
+  color: #333;
+}
+
+body.light-mode .nav-toggle span {
+  background: #333;
+}
+
+body.light-mode .theme-toggle {
+  border-color: rgba(0, 0, 0, 0.1);
+  color: #333;
+}
+
+/* Smooth transitions for theme changes */
+body,
+.navbar,
+.service-card,
+.portfolio-item,
+.contact-form input,
+.contact-form textarea,
+.footer {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* System preference detection fallback */
+@media (prefers-color-scheme: dark) {
+  body:not(.light-mode):not(.dark-mode) {
+    background-color: #0f1419;
+    color: #e6e6e6;
+  }
+  
+  body:not(.light-mode):not(.dark-mode) .navbar {
+    background: rgba(15, 20, 25, 0.95);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  body:not(.light-mode):not(.dark-mode) .nav-link {
+    color: #e6e6e6;
+  }
+  
+  body:not(.light-mode):not(.dark-mode) .theme-toggle {
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #e6e6e6;
+  }
 }

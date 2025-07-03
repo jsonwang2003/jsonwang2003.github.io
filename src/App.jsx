@@ -4,6 +4,35 @@ import './App.css'
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [currentSection, setCurrentSection] = useState('home')
+  
+  // Detect system preference for dark mode
+  const getSystemPreference = () => {
+    return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+  }
+  
+  const [isDarkMode, setIsDarkMode] = useState(getSystemPreference())
+
+  // Listen for system theme changes
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
+    
+    const handleThemeChange = (e) => {
+      setIsDarkMode(e.matches)
+      document.body.classList.toggle('dark-mode', e.matches)
+      document.body.classList.toggle('light-mode', !e.matches)
+    }
+
+    // Set initial theme based on system preference
+    document.body.classList.toggle('dark-mode', isDarkMode)
+    document.body.classList.toggle('light-mode', !isDarkMode)
+
+    // Listen for changes in system theme
+    mediaQuery.addEventListener('change', handleThemeChange)
+
+    return () => {
+      mediaQuery.removeEventListener('change', handleThemeChange)
+    }
+  }, [isDarkMode])
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,6 +57,13 @@ function App() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  const toggleDarkMode = () => {
+    const newDarkMode = !isDarkMode
+    setIsDarkMode(newDarkMode)
+    document.body.classList.toggle('dark-mode', newDarkMode)
+    document.body.classList.toggle('light-mode', !newDarkMode)
+  }
+
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId)
     if (element) {
@@ -42,7 +78,8 @@ function App() {
       <nav className="navbar">
         <div className="nav-container">
           <div className="nav-logo">
-            <span>Your Name</span>
+            <img src={isDarkMode ? './assets/CW Dark.png' : './assets/CW Light.png'} alt="Logo" />
+            <span>Chia-Sheng Wang</span>
           </div>
           <div className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
             <a 
@@ -80,6 +117,16 @@ function App() {
             >
               Contact
             </a>
+          </div>
+          <div className="nav-actions">
+            <button 
+              className="theme-toggle" 
+              onClick={toggleDarkMode}
+              aria-label="Toggle theme"
+              title={isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'}
+            >
+              {isDarkMode ? '☀️' : '🌙'}
+            </button>
           </div>
           <div className="nav-toggle" onClick={() => setIsMenuOpen(!isMenuOpen)}>
             <span></span>
