@@ -17,12 +17,14 @@ function App() {
     const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
     
     const handleThemeChange = (e) => {
+      console.log('System theme changed to:', e.matches ? 'dark' : 'light')
       setIsDarkMode(e.matches)
       document.body.classList.toggle('dark-mode', e.matches)
       document.body.classList.toggle('light-mode', !e.matches)
     }
 
     // Set initial theme based on system preference
+    console.log('Initial system preference:', isDarkMode ? 'dark' : 'light')
     document.body.classList.toggle('dark-mode', isDarkMode)
     document.body.classList.toggle('light-mode', !isDarkMode)
 
@@ -32,7 +34,7 @@ function App() {
     return () => {
       mediaQuery.removeEventListener('change', handleThemeChange)
     }
-  }, [isDarkMode])
+  }, [])
 
   useEffect(() => {
     const handleScroll = () => {
@@ -57,13 +59,6 @@ function App() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const toggleDarkMode = () => {
-    const newDarkMode = !isDarkMode
-    setIsDarkMode(newDarkMode)
-    document.body.classList.toggle('dark-mode', newDarkMode)
-    document.body.classList.toggle('light-mode', !newDarkMode)
-  }
-
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId)
     if (element) {
@@ -78,7 +73,7 @@ function App() {
       <nav className="navbar">
         <div className="nav-container">
           <div className="nav-logo">
-            <img src={isDarkMode ? './assets/CW Dark.png' : './assets/CW Light.png'} alt="Logo" />
+            <img src={isDarkMode ? 'src/assets/CW Dark.png' : 'src/assets/CW Light.png'} alt="Logo" className="logo" />
             <span>Chia-Sheng Wang</span>
           </div>
           <div className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
@@ -119,14 +114,10 @@ function App() {
             </a>
           </div>
           <div className="nav-actions">
-            <button 
-              className="theme-toggle" 
-              onClick={toggleDarkMode}
-              aria-label="Toggle theme"
-              title={isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'}
-            >
-              {isDarkMode ? '☀️' : '🌙'}
-            </button>
+            <div className="theme-indicator">
+              <span className="theme-icon">{isDarkMode ? '🌙' : '☀️'}</span>
+              <span className="theme-text">Auto</span>
+            </div>
           </div>
           <div className="nav-toggle" onClick={() => setIsMenuOpen(!isMenuOpen)}>
             <span></span>
