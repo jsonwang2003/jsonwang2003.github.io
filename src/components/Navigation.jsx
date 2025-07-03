@@ -51,7 +51,7 @@ function Navigation() {
     <nav className="navbar">
       <div className="nav-container">
         <div className="nav-logo">
-          <img src={isDarkMode ? '/CW Dark.png' : '/CW Light.png'} alt="Logo" className="logo" />
+          <img src={isDarkMode ? '/favicon-dark.png' : '/favicon-light.png'} alt="Logo" className="logo" />
           <span className="nav-logo-text">Chia-Sheng Wang</span>
         </div>
         <div className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
