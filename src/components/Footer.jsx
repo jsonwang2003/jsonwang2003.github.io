@@ -1,4 +1,6 @@
 import './Footer.css'
+import GitHubIcon from '@mui/icons-material/GitHub'
+import LinkedInIcon from '@mui/icons-material/LinkedIn'
 
 function Footer() {
   return (
@@ -6,17 +8,14 @@ function Footer() {
       <div className="container">
         <div className="footer-content">
           <div className="footer-text">
-            <p>&copy; 2025 Your Name. All rights reserved.</p>
+            <p>&copy; 2025 Chia-Sheng Wang. All rights reserved.</p>
           </div>
           <div className="footer-social">
-            <a href="#" aria-label="GitHub">
-              <span>📚</span>
+            <a href="https://github.com/jsonwang2003" aria-label="GitHub" target="_blank" rel="noopener noreferrer" className="social-link">
+              <GitHubIcon sx={{ fontSize: '2.4rem' }} />
             </a>
-            <a href="#" aria-label="LinkedIn">
-              <span>💼</span>
-            </a>
-            <a href="#" aria-label="Twitter">
-              <span>🐦</span>
+            <a href="https://www.linkedin.com/in/chia-sheng-wang/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" className="social-link">
+              <LinkedInIcon sx={{ fontSize: '2.4rem' }} />
             </a>
           </div>
         </div>

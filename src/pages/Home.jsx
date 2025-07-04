@@ -9,17 +9,17 @@ function Home() {
         <div className="hero-container">
           <div className="hero-content">
             <h1 className="hero-title">
-              Welcome to <span className="gradient-text">Your Website</span>
+              Hi, I'm <span className="gradient-text">Chia-Sheng Wang</span>
             </h1>
             <p className="hero-subtitle">
-              Create amazing experiences with modern web technologies
+              Computer Science Student | Robotics Enthusiast | Future Innovator
             </p>
             <div className="hero-buttons">
               <Link to="/portfolio" className="btn btn-primary">
-                View Portfolio
+                View Projects
               </Link>
               <Link to="/contact" className="btn btn-secondary">
-                Get In Touch
+                Let's Connect
               </Link>
             </div>
           </div>

@@ -35,16 +35,16 @@ body.dark-mode .about {
   background-color: #151b23;
 }
 
-body.dark-mode .services {
+body.dark-mode .education {
   background-color: #0f1419;
 }
 
-body.dark-mode .service-card {
+body.dark-mode .education-card {
   background: #1a1f28;
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-body.dark-mode .service-card:hover {
+body.dark-mode .Education-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
 }
@@ -93,6 +93,23 @@ body.dark-mode .contact-form textarea::placeholder {
 body.dark-mode .footer {
   background-color: #0a0f14;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Dark mode icon colors */
+body.dark-mode .service-icon {
+  color: #667eea;
+}
+
+body.dark-mode .contact-icon {
+  color: #667eea;
+}
+
+body.dark-mode .footer-social a {
+  color: #e6e6e6;
+}
+
+body.dark-mode .footer-social a:hover {
+  color: #667eea;
 }
 
 /* Light Mode Styles (explicit for better control) */

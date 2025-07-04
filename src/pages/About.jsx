@@ -8,27 +8,31 @@ function About() {
           <h2 className="section-title">About Me</h2>
           <div className="about-content">
             <div className="about-text">
-              <h3>Hi, I'm a passionate developer</h3>
+              <h3>Hi, I'm a Computer Science Student</h3>
               <p>
-                I specialize in creating modern, responsive websites and applications 
-                using the latest technologies. With a focus on user experience and 
-                clean code, I bring ideas to life through innovative web solutions.
+                I'm currently pursuing my degree in Computer Science with a strong passion for 
+                robotics and emerging technologies. I love exploring how software and hardware 
+                come together to create innovative solutions that can make a real impact.
               </p>
               <p>
-                My journey in web development started several years ago, and I've been 
-                continuously learning and adapting to new technologies. I believe in 
-                writing clean, maintainable code and creating user experiences that 
-                are both beautiful and functional.
+                My academic journey has given me a solid foundation in programming, algorithms, 
+                and system design. Beyond coursework, I'm particularly fascinated by robotics, 
+                AI, and automation - areas where I see endless possibilities for innovation 
+                and problem-solving.
               </p>
               <div className="skills">
-                <span className="skill">React</span>
+                <span className="skill">Python</span>
+                <span className="skill">Java</span>
+                <span className="skill">C++</span>
                 <span className="skill">JavaScript</span>
-                <span className="skill">TypeScript</span>
-                <span className="skill">CSS3</span>
-                <span className="skill">Node.js</span>
-                <span className="skill">Vite</span>
+                <span className="skill">React</span>
+                <span className="skill">Robotics</span>
+                <span className="skill">Machine Learning</span>
+                <span className="skill">Algorithms</span>
+                <span className="skill">Data Structures</span>
                 <span className="skill">Git</span>
-                <span className="skill">MongoDB</span>
+                <span className="skill">Arduino</span>
+                <span className="skill">ROS</span>
               </div>
             </div>
           </div>

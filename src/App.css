@@ -335,19 +335,19 @@ body {
   font-size: 0.9rem;
 }
 
-/* Services Section */
-.services {
+/* Education Section */
+.education {
   padding: 100px 0;
   background: white;
 }
 
-.services-grid {
+.education-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
 }
 
-.service-card {
+.education-card {
   background: white;
   padding: 2rem;
   border-radius: 15px;
@@ -356,23 +356,23 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.service-card:hover {
+.education-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 
-.service-icon {
+.education-icon {
   font-size: 3rem;
   margin-bottom: 1rem;
 }
 
-.service-card h3 {
+.education-card h3 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
   color: #333;
 }
 
-.service-card p {
+.education-card p {
   color: #666;
   line-height: 1.6;
 }
@@ -669,7 +669,7 @@ body {
     text-align: center;
   }
 
-  .services-grid {
+  .education-grid {
     grid-template-columns: 1fr;
   }
 
@@ -760,16 +760,16 @@ body.dark-mode .about {
   background-color: #151b23;
 }
 
-body.dark-mode .services {
+body.dark-mode .education {
   background-color: #0f1419;
 }
 
-body.dark-mode .service-card {
+body.dark-mode .education-card {
   background: #1a1f28;
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-body.dark-mode .service-card:hover {
+body.dark-mode .education-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
 }

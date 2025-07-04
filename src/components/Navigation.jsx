@@ -41,7 +41,7 @@ function Navigation() {
     const path = location.pathname
     if (path === '/' || path === '/home') return 'home'
     if (path === '/about') return 'about'
-    if (path === '/services') return 'services'
+    if (path === '/education') return 'education'
     if (path === '/portfolio') return 'portfolio'
     if (path === '/contact') return 'contact'
     return 'home'
@@ -70,11 +70,11 @@ function Navigation() {
             About
           </Link>
           <Link 
-            to="/services" 
-            className={`nav-link ${getCurrentPage() === 'services' ? 'active' : ''}`}
+            to="/education" 
+            className={`nav-link ${getCurrentPage() === 'education' ? 'active' : ''}`}
             onClick={() => setIsMenuOpen(false)}
           >
-            Services
+            Education
           </Link>
           <Link 
             to="/portfolio" 
