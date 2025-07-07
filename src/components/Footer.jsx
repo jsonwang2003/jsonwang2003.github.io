@@ -14,7 +14,7 @@ import Snackbar from '@mui/material/Snackbar';
 import React from 'react';
 import Link from '@mui/material/Link'
 
-const createStyledIcon = (IconComponent) => styled(IconComponent)`
+const createStyledIcon = (IconComponent, hoverColor) => styled(IconComponent)`
    ${({ theme }) => `
    font-size: 2.5rem;
    cursor: pointer;
@@ -23,15 +23,15 @@ const createStyledIcon = (IconComponent) => styled(IconComponent)`
       duration: theme.transitions.duration.standard,
    })};
    &:hover {
-      color: black;
+      color: ${hoverColor};
       transform: scale(1.3);
    }
    `}
 `;
 
-const StyledGitHubIcon = createStyledIcon(GitHubIcon);
-const StyledLinkedInIcon = createStyledIcon(LinkedInIcon);
-const StyledEmailIcon = createStyledIcon(EmailIcon);
+const StyledGitHubIcon = createStyledIcon(GitHubIcon, "#FFFFFF");
+const StyledLinkedInIcon = createStyledIcon(LinkedInIcon, "#0e76a8");
+const StyledEmailIcon = createStyledIcon(EmailIcon, "#ff5722");
 
 const ReactLogo = () => (
    <img src={reactIcon} alt="React logo" style={{height: "0.75rem", marginLeft: "0.25rem", marginRight: "0.25rem"}}/>

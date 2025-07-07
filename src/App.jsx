@@ -13,12 +13,19 @@ import theme from './theme';
 
 function App() {
    return (
-         <ThemeProvider theme={theme}>
+      <ThemeProvider theme={theme}>
          <CssBaseline />
          <Router>
             <Box>
                <Navigation />
-               <Container>
+               <Container 
+                  component="main"
+                  sx={{
+                     marginTop: '80px', 
+                     marginBottom: '20vh', 
+                     minHeight: 'calc(100vh - 100px)', 
+                  }}
+               >
                   <Routes>
                      <Route path="/" element={<Home />} />
                      <Route path="/about" element={<About />} />
