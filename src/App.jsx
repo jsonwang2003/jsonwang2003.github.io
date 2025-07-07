@@ -1,33 +1,36 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Navigation from './components/Navigation'
-import Footer from './components/Footer'
-import Home from './pages/Home'
-import About from './pages/About'
-import Education from './pages/Education'
-import Portfolio from './pages/Portfolio'
-import Contact from './pages/Contact'
-import './styles/global.css'
-import './styles/theme.css'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { ThemeProvider } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
+import Container from '@mui/material/Container';
+import Box from '@mui/material/Box';
+import Navigation from './components/Navigation';
+import Home from './pages/Home';
+import About from './pages/About';
+import Education from './pages/Education';
+import Projects from './pages/Projects';
+import Footer from './components/Footer';
+import theme from './theme';
 
 function App() {
-  return (
-    <Router>
-      <div className="app">
-        <Navigation />
-        <main className="main-content">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/home" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/education" element={<Education />} />
-            <Route path="/portfolio" element={<Portfolio />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
-    </Router>
-  )
+   return (
+         <ThemeProvider theme={theme}>
+         <CssBaseline />
+         <Router>
+            <Box>
+               <Navigation />
+               <Container>
+                  <Routes>
+                     <Route path="/" element={<Home />} />
+                     <Route path="/about" element={<About />} />
+                     <Route path="/education" element={<Education />} />
+                     <Route path="/projects" element={<Projects />} />
+                  </Routes>
+               </Container>
+               <Footer />
+            </Box>
+         </Router>
+      </ThemeProvider>
+   );
 }
 
-export default App
+export default App;
