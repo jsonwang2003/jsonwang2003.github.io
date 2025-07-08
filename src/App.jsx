@@ -9,9 +9,13 @@ import About from './pages/About';
 import Education from './pages/Education';
 import Projects from './pages/Projects';
 import Footer from './components/Footer';
-import theme from './theme';
+import getTheme from './theme';
+import { ThemeContextProvider, useThemeMode } from './ThemeContext';
 
-function App() {
+function AppContent() {
+   const { mode } = useThemeMode();
+   const theme = getTheme(mode);
+
    return (
       <ThemeProvider theme={theme}>
          <CssBaseline />
@@ -37,6 +41,14 @@ function App() {
             </Box>
          </Router>
       </ThemeProvider>
+   );
+}
+
+function App() {
+   return (
+      <ThemeContextProvider>
+         <AppContent />
+      </ThemeContextProvider>
    );
 }
 
