@@ -30,8 +30,8 @@ const createStyledIcon = (IconComponent, hoverColor) => styled(IconComponent)`
 `;
 
 const StyledGitHubIcon = createStyledIcon(GitHubIcon, "#FFFFFF");
-const StyledLinkedInIcon = createStyledIcon(LinkedInIcon, "#0e76a8");
-const StyledEmailIcon = createStyledIcon(EmailIcon, "#ff5722");
+const StyledLinkedInIcon = createStyledIcon(LinkedInIcon, "#3466c8");
+const StyledEmailIcon = createStyledIcon(EmailIcon, "#FFFFFF");
 
 const ReactLogo = () => (
    <img src={reactIcon} alt="React logo" style={{height: "0.75rem", marginLeft: "0.25rem", marginRight: "0.25rem"}}/>
@@ -75,8 +75,6 @@ function Footer() {
          maxWidth={false}
          sx={{
             backgroundColor: theme.palette.secondary.main,
-            position: 'fixed',
-            bottom: 0,
             width: '100%',
             minHeight: '30px',
             height: '20vh',

@@ -5,10 +5,10 @@ const getTheme = (mode) => createTheme({
       mode,
       ...(mode === 'light' ? {
          primary: {
-            main: '#350057',
+            main: '#86d1cc',
          },
          secondary: {
-            main: '#E48C27',
+            main: "#ff9500",
          },
          background: {
             default: '#f5f5f5',
@@ -16,7 +16,7 @@ const getTheme = (mode) => createTheme({
          },
          text: {
             primary: '#212121',
-            secondary: '#757575',
+            secondary: '#212121',
          },
       } : {
          primary: {
@@ -59,9 +59,6 @@ const getTheme = (mode) => createTheme({
          // The sharp curve is used by objects that may return to the screen at any time.
          sharp: 'cubic-bezier(0.4, 0, 0.6, 1)',
       },
-   },
-   shape: {
-      borderRadius: 8,
    },
 });
 

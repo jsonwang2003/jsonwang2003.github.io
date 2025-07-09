@@ -25,7 +25,7 @@ function AppContent() {
                <Container 
                   component="main"
                   sx={{
-                     marginTop: '80px', 
+                     marginTop: '120px', 
                      marginBottom: '20vh', 
                      minHeight: 'calc(100vh - 100px)', 
                   }}
