@@ -103,13 +103,16 @@ function Footer() {
                   color: theme.palette.text.secondary, 
                   display: 'block' 
                }}>
-                  Built with<ReactLogo />React +<ViteLogo />Vite, hosted on Github Pages
+                  Built with<ReactLogo />
+                  <Link href="https://reactjs.org/" target="_blank" rel="noopener noreferrer" sx={{color: theme.palette.text.secondary, textDecorationColor: theme.palette.text.secondary}}>React</Link> +
+                  <ViteLogo /><Link href="https://vitejs.dev/" target="_blank" rel="noopener noreferrer" sx={{color: theme.palette.text.secondary, textDecorationColor: theme.palette.text.secondary}}>Vite</Link>
+                  , hosted on <Link href="https://jsonwang2003.github.io/" target="_blank" rel="noopener noreferrer" sx={{color: theme.palette.text.secondary, textDecorationColor: theme.palette.text.secondary}}>Github Pages</Link>
                </Typography>
                <Typography variant="caption" gutterBottom sx={{ 
                   color: theme.palette.text.secondary, 
                   display: 'block' 
                }}>
-                  Utilized Material UI
+                  Utilized <Link href="https://mui.com/" target="_blank" rel="noopener noreferrer" sx={{color: theme.palette.text.secondary, textDecorationColor: theme.palette.text.secondary}}>Material UI</Link>
                </Typography>
             </Box>
             <Box sx={{
