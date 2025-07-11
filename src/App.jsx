@@ -28,6 +28,7 @@ function AppContent() {
                      marginTop: '120px', 
                      marginBottom: '20vh', 
                      minHeight: 'calc(100vh - 100px)', 
+                     backgroundColor: theme.palette.background.default,
                   }}
                >
                   <Routes>

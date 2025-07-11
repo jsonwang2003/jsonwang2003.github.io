@@ -8,16 +8,19 @@ const getTheme = (mode) => createTheme({
             main: '#86d1cc',
          },
          secondary: {
-            main: "#ff9500",
+            main: "rgba(255, 149, 0, 0.95)",
          },
          background: {
-            default: '#f5f5f5',
+            default: '#ffffff',
             paper: '#ffffff',
          },
          text: {
             primary: '#212121',
             secondary: '#212121',
          },
+         navigationBorder: {
+            main: 'rgb(0, 116, 211)'
+         }
       } : {
          primary: {
             main: '#FF6E1A',
@@ -34,34 +37,9 @@ const getTheme = (mode) => createTheme({
             secondary: '#aaaaaa',
          },
          navigationBorder: {
-            main: '#b547ff'
+            main: '#b547ff',
          }
       }),
-   },
-   transitions: {
-      duration: {
-         shortest: 150,
-         shorter: 200,
-         short: 250,
-         standard: 300, 		// most basic recommended timing
-         complex: 375,      	// this is to be used in complex animations
-         enteringScreen: 225,	// recommended when something is entering screen
-         leavingScreen: 195, 	// recommended when something is leaving screen
-      },
-      easing: {
-         // This is the most common easing curve.
-         easeInOut: 'cubic-bezier(0.4, 0, 0.2, 1)',
-
-         // Objects enter the screen at full velocity from off-screen and
-         // slowly decelerate to a resting point.
-         easeOut: 'cubic-bezier(0.0, 0, 0.2, 1)',
-
-         // Objects leave the screen at full velocity. They do not decelerate when off-screen.
-         easeIn: 'cubic-bezier(0.4, 0, 1, 1)',
-         
-         // The sharp curve is used by objects that may return to the screen at any time.
-         sharp: 'cubic-bezier(0.4, 0, 0.6, 1)',
-      },
    },
 });
 
