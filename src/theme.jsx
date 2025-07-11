@@ -33,6 +33,9 @@ const getTheme = (mode) => createTheme({
             primary: '#ffffff',
             secondary: '#aaaaaa',
          },
+         navigationBorder: {
+            main: '#b547ff'
+         }
       }),
    },
    transitions: {
