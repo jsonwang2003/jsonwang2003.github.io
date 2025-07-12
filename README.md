@@ -1,166 +1,266 @@
-# Modern Static Website Template
+# Chia-Sheng Wang Portfolio Website
 
-A beautiful, responsive static website template built with **Vite** and **React.js**. This template features modern design patterns, smooth animations, and a mobile-first approach.
+A modern, responsive portfolio website showcasing my professional journey, skills, and projects. Built with cutting-edge web technologies for optimal performance and user experience.
+
+🌐 **Live Site**: [https://jsonwang2003.github.io](https://jsonwang2003.github.io)
 
 ## ✨ Features
 
-- **Modern Design**: Clean, professional layout with gradient backgrounds and smooth animations
-- **Responsive**: Mobile-first design that works perfectly on all devices
-- **Fast Performance**: Built with Vite for lightning-fast development and optimized builds
-- **Smooth Navigation**: Smooth scrolling between sections with active navigation indicators
-- **Interactive Elements**: Hover effects, form validation, and mobile-friendly hamburger menu
-- **SEO Optimized**: Proper meta tags and semantic HTML structure
+- **Modern Design**: Clean, professional interface with Material-UI components
+- **Responsive Layout**: Seamless experience across desktop, tablet, and mobile devices
+- **Theme Support**: Light and dark theme support with smooth transitions
+- **Interactive Navigation**: Sliding border animations and active page indicators
+- **Performance Optimized**: Built with Vite for lightning-fast loading
+- **Accessibility**: WCAG compliant with proper semantic HTML and ARIA labels
+- **SEO Optimized**: Proper meta tags and structured data
 
-## 🚀 Sections
+## 🏗️ Project Structure
 
-1. **Hero Section**: Eye-catching introduction with call-to-action buttons
-2. **About Section**: Personal/company information with skill tags
-3. **Services Section**: Grid layout showcasing services with icons
-4. **Portfolio Section**: Project showcase with descriptions and tags
-5. **Contact Section**: Contact form and information
-6. **Footer**: Social links and copyright information
+```
+├── public/                 # Static assets
+│   ├── favicon-light.png   # Light theme favicon
+│   ├── favicon-dark.png    # Dark theme favicon
+│   └── vite.svg           # Vite logo
+├── src/
+│   ├── components/        # Reusable UI components
+│   │   ├── Navigation.jsx # Main navigation with hover effects
+│   │   └── Footer.jsx     # Footer with social links
+│   ├── pages/             # Page components
+│   │   ├── Home.jsx       # Landing page
+│   │   ├── About.jsx      # About me section
+│   │   ├── Education.jsx  # Educational background
+│   │   └── Projects.jsx   # Project showcase
+│   ├── assets/            # Project assets
+│   ├── theme.jsx          # Material-UI theme configuration
+│   ├── App.jsx            # Main app component
+│   └── main.jsx           # App entry point
+├── .github/
+│   └── workflows/
+│       └── deploy.yml     # GitHub Actions deployment
+├── deploy.ps1             # PowerShell deployment script
+├── deploy.bat             # Batch deployment script (deprecated)
+└── vite.config.js         # Vite configuration
+```
 
 ## 🛠️ Technologies Used
 
-- **React 19.1.0**: Modern React with hooks
-- **Vite 7.0.0**: Fast build tool and development server
-- **CSS3**: Modern CSS with Grid, Flexbox, and custom properties
-- **JavaScript ES6+**: Modern JavaScript features
-- **Google Fonts**: Inter font family for clean typography
+### Core Framework
 
-## 📦 Installation
+- **React 19.1.0** - Modern React with latest features and hooks
+- **Vite 7.0.0** - Next-generation frontend build tool
+- **React Router DOM 7.6.3** - Client-side routing with navigation
 
-1. Clone the repository:
+### UI & Styling
+
+- **Material-UI 7.2.0** - React component library with Material Design
+- **Emotion** - CSS-in-JS styling solution
+- **Material Icons** - Comprehensive icon library
+
+### Development Tools
+
+- **ESLint** - Code linting and quality assurance
+- **GitHub Actions** - Automated CI/CD pipeline
+- **GitHub Pages** - Static site hosting
+
+## 🚀 Quick Start
+
+### Prerequisites
+
+- Node.js 18+
+- npm or yarn package manager
+- Git
+
+### Installation
+
+1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/yourusername/your-repo.git
-   cd your-repo
+   git clone https://github.com/jsonwang2003/jsonwang2003.github.io.git
+   cd jsonwang2003.github.io
    ```
 
-2. Install dependencies:
+2. **Install dependencies**
 
    ```bash
    npm install
    ```
 
-3. Start the development server:
+3. **Start development server**
 
    ```bash
    npm run dev
    ```
 
-4. Open your browser and visit `http://localhost:5173`
+4. **Open in browser**
+   Navigate to `http://localhost:5173`
 
-## 🎯 Available Scripts
+### Available Scripts
 
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run preview` - Preview production build
-- `npm run lint` - Run ESLint
+| Command           | Description                              |
+| ----------------- | ---------------------------------------- |
+| `npm run dev`     | Start development server with hot reload |
+| `npm run build`   | Build optimized production bundle        |
+| `npm run preview` | Preview production build locally         |
+| `npm run lint`    | Run ESLint code analysis                 |
 
 ## 🎨 Customization
 
-### Colors
+### Theme Configuration
 
-The website uses a gradient color scheme that can be easily customized by modifying the CSS custom properties in `src/App.css`:
+The website uses a custom Material-UI theme with light/dark mode support. Modify `src/theme.jsx`:
 
-```css
-/* Primary gradient */
-background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-
-/* Secondary gradient */
-background: linear-gradient(135deg, #ffd89b 0%, #19547b 100%);
+```jsx
+const getTheme = (mode) =>
+  createTheme({
+    palette: {
+      mode,
+      ...(mode === "light"
+        ? {
+            primary: {
+              main: "#86d1cc",
+            },
+            secondary: {
+              main: "rgba(255, 149, 0, 0.95)",
+            },
+            background: {
+              default: "#ffffff",
+              paper: "#ffffff",
+            },
+            text: {
+              primary: "#212121",
+              secondary: "#212121",
+            },
+            navigationBorder: {
+              main: "rgb(0, 116, 211)",
+            },
+          }
+        : {
+            primary: {
+              main: "#FF6E1A",
+            },
+            secondary: {
+              main: "#1a1a1a",
+            },
+            background: {
+              default: "#0a0a0a",
+              paper: "#1a1a1a",
+            },
+            text: {
+              primary: "#ffffff",
+              secondary: "#aaaaaa",
+            },
+            navigationBorder: {
+              main: "#ffffffff",
+            },
+          }),
+    },
+  });
 ```
 
-### Content
+### Navigation Customization
 
-Update the content in `src/App.jsx`:
+The navigation features interactive hover effects and active page indicators. Modify `src/components/Navigation.jsx` to:
 
-1. **Navigation**: Modify the `nav-logo` and navigation links
-2. **Hero Section**: Change the title, subtitle, and button text
-3. **About Section**: Update personal information and skills
-4. **Services**: Modify service cards with your offerings
-5. **Portfolio**: Add your projects with descriptions
-6. **Contact**: Update contact information and form
+- Add new navigation links
+- Customize hover animations
+- Change active state styling
 
-### Styling
+### Content Updates
 
-All styles are contained in `src/App.css` and follow a mobile-first approach. Key areas to customize:
+Update personal information in the respective page components:
 
-- **Typography**: Font sizes and weights
-- **Colors**: Primary and secondary color schemes
-- **Spacing**: Padding and margins
-- **Animations**: Hover effects and transitions
+- **Home**: `src/pages/Home.jsx` - Landing page content
+- **About**: `src/pages/About.jsx` - Personal background
+- **Education**: `src/pages/Education.jsx` - Academic history
+- **Projects**: `src/pages/Projects.jsx` - Portfolio showcase
 
-## 📱 Mobile Responsiveness
+## 🚀 Deployment
 
-The template is fully responsive with breakpoints at:
+### Automatic Deployment (Recommended)
 
-- **768px**: Tablet layout
-- **480px**: Mobile layout
+The project uses GitHub Actions for automatic deployment:
 
-Features include:
-
-- Collapsible navigation menu
-- Stacked layouts for mobile
-- Optimized touch targets
-- Readable typography on small screens
-
-## 🌐 Deployment
-
-### GitHub Pages
-
-1. Build the project:
+1. **Push to main branch**
 
    ```bash
-   npm run build
+   git add .
+   git commit -m "Your commit message"
+   git push origin main
    ```
 
-2. Deploy the `dist` folder to GitHub Pages
+2. **GitHub Actions will automatically:**
+   - Install dependencies
+   - Build the project
+   - Deploy to GitHub Pages
 
-### Vercel
+### Manual Deployment
 
-1. Connect your GitHub repository to Vercel
-2. Vercel will automatically detect the Vite configuration
-3. Deploy with one click
+**Using PowerShell (Windows):**
 
-### Netlify
+```powershell
+.\deploy.ps1
+```
 
-1. Connect your GitHub repository to Netlify
-2. Set build command to `npm run build`
-3. Set publish directory to `dist`
-4. Deploy
+**Using npm commands:**
 
-## 🤝 Contributing
+```bash
+npm run build
+# Then manually deploy the dist/ folder
+```
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+## 🌐 GitHub Pages Configuration
 
-## 📄 License
+The site is configured for GitHub Pages deployment:
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+- **Source**: GitHub Actions workflow
+- **Custom Domain**: Available for configuration
+- **HTTPS**: Automatically enabled
+- **Build Process**: Automated via `.github/workflows/deploy.yml`
+
+## 📱 Responsive Design
+
+The website is fully responsive with breakpoints:
+
+- **Desktop**: 1200px+ (Full navigation, multi-column layouts)
+- **Tablet**: 768px - 1199px (Adapted layouts)
+- **Mobile**: < 768px (Stacked layouts, touch-optimized)
+
+## 🔧 Development Notes
+
+### Key Features Implemented
+
+1. **Interactive Navigation**
+
+   - Sliding border animations on hover
+   - Active page indicators
+   - Smooth transitions
+
+2. **Material-UI Integration**
+
+   - Custom theme with light/dark support
+   - Responsive typography
+   - Consistent component styling
+
+3. **Performance Optimizations**
+   - Code splitting with manual chunks
+   - Optimized bundle sizes
+   - Fast refresh during development
+
+## �‍💻 About the Developer
+
+**Chia-Sheng Wang**
+
+- GitHub: [@jsonwang2003](https://github.com/jsonwang2003)
+- LinkedIn: [Chia-Sheng Wang](https://www.linkedin.com/in/chia-sheng-wang/)
+- Email: jason0100w@gmail.com
 
 ## 🙏 Acknowledgments
 
-- Design inspiration from modern web design trends
-- Icons from Unicode emojis
-- Fonts from Google Fonts
-- Built with Vite and React
+- [Material-UI](https://mui.com/) for the excellent React components
+- [Vite](https://vitejs.dev/) for the blazing-fast build tool
+- [React Router](https://reactrouter.com/) for seamless navigation
+- [GitHub Pages](https://pages.github.com/) for free hosting
 
 ---
 
-**Happy coding! 🚀**+ Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+**Built with ❤️ using React + Vite + Material-UI**

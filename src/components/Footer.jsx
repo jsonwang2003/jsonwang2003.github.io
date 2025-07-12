@@ -6,7 +6,7 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import { styled } from '@mui/material/styles';
 import viteIcon from '/vite.svg';
-import reactIcon from '../assets/react.svg';
+import reactIcon from '/react.svg';
 import {useTheme} from '@mui/material/styles';
 import EmailIcon from '@mui/icons-material/Email';
 import Slide from '@mui/material/Slide';
