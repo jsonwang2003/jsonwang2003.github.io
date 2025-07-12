@@ -69,6 +69,21 @@ function Footer() {
       }));
    }
 
+   const footerText = (message) => {
+      return (
+         <Typography variant="caption" gutterBottom sx={{ 
+            color: theme.palette.text.secondary, 
+            display: 'block',
+            whiteSpace: { xs: 'normal', md: 'nowrap' },
+            textOverflow: { xs: 'unset', md: 'ellipsis' },
+            overflow: { xs: 'visible', md: 'hidden' },
+            pb: 1
+         }}>
+            {message}
+         </Typography>
+      );
+   }
+
    return (
       <Container 
          component="footer" 
@@ -76,44 +91,41 @@ function Footer() {
          sx={{
             backgroundColor: theme.palette.secondary.main,
             width: '100%',
-            minHeight: '30px',
-            height: '20vh',
+            minHeight: '20vh',
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'center'
          }}
       >
-         <Box className="footer-content" sx={{
+         <Box sx={{
             display: 'flex',
             alignItems: 'center',
             alignContent: 'center',
-            justifyContent: 'space-evenly',
+            justifyContent: 'space-between',
+            gap: 10,
             height: '100%',
             padding: '20px',
             boxSizing: 'border-box'
          }}>
-            <Box className="footer-text-container">
-               <Typography variant="caption" gutterBottom sx={{ 
-                  color: theme.palette.text.secondary, 
-                  display: 'block' 
-               }}>
-                  &copy; 2025 Chia-Sheng Wang
-               </Typography>
-               <Typography variant="caption" gutterBottom sx={{ 
-                  color: theme.palette.text.secondary, 
-                  display: 'block' 
-               }}>
-                  Built with<ReactLogo />
-                  <Link href="https://reactjs.org/" target="_blank" rel="noopener noreferrer" sx={{color: theme.palette.text.secondary, textDecorationColor: theme.palette.text.secondary}}>React</Link> +
-                  <ViteLogo /><Link href="https://vitejs.dev/" target="_blank" rel="noopener noreferrer" sx={{color: theme.palette.text.secondary, textDecorationColor: theme.palette.text.secondary}}>Vite</Link>
-                  , hosted on <Link href="https://jsonwang2003.github.io/" target="_blank" rel="noopener noreferrer" sx={{color: theme.palette.text.secondary, textDecorationColor: theme.palette.text.secondary}}>Github Pages</Link>
-               </Typography>
-               <Typography variant="caption" gutterBottom sx={{ 
-                  color: theme.palette.text.secondary, 
-                  display: 'block' 
-               }}>
-                  Utilized <Link href="https://mui.com/" target="_blank" rel="noopener noreferrer" sx={{color: theme.palette.text.secondary, textDecorationColor: theme.palette.text.secondary}}>Material UI</Link>
-               </Typography>
+            <Box>
+               {footerText(
+                  <>
+                     &copy; 2025 Chia-Sheng Wang
+                  </>
+               )}
+               {footerText(
+                  <>
+                     Built with<ReactLogo />
+                     <Link href="https://reactjs.org/" target="_blank" rel="noopener noreferrer" sx={{color: theme.palette.text.secondary, textDecorationColor: theme.palette.text.secondary}}>React</Link> +
+                     <ViteLogo /><Link href="https://vitejs.dev/" target="_blank" rel="noopener noreferrer" sx={{color: theme.palette.text.secondary, textDecorationColor: theme.palette.text.secondary}}>Vite</Link>
+                     , hosted on <Link href="https://jsonwang2003.github.io/" target="_blank" rel="noopener noreferrer" sx={{color: theme.palette.text.secondary, textDecorationColor: theme.palette.text.secondary}}>Github Pages</Link>
+                  </>
+               )}
+               {footerText(
+                  <>
+                     Utilized <Link href="https://mui.com/" target="_blank" rel="noopener noreferrer" sx={{color: theme.palette.text.secondary, textDecorationColor: theme.palette.text.secondary}}>Material UI</Link>
+                  </>
+               )}
             </Box>
             <Box sx={{
                display: 'flex',
