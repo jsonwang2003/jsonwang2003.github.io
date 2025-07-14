@@ -44,8 +44,8 @@ const getTheme = (mode) => createTheme({
    breakpoints: {
       values: {
          xs: 0,
-         sm: 450,
-         md: 800,
+         sm: 600,
+         md: 900,
          lg: 1280,
          xl: 1920,
       },
@@ -61,6 +61,21 @@ const getTheme = (mode) => createTheme({
          easeIn: 'cubic-bezier(0.4, 0, 1, 1)',
          sharp: 'cubic-bezier(0.4, 0, 0.6, 1)',
       }
+   },
+   typography: {
+      fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+      h1: {
+         fontSize: 24,
+         fontWeight: 1000,
+         lineHeight: 1.5,
+         letterSpacing: '0.01562em',
+      },
+      p: {
+         fontSize: '1rem',
+         fontWeight: 400,
+         lineHeight: 1.5,
+         letterSpacing: '0.00938em',
+      },
    },
 });
 
