@@ -5,21 +5,21 @@ import { useTheme } from '@mui/material/styles';
 function About() {
    const theme = useTheme();
    const skills = [
-      { skill: "HTML", icon: "src/assets/skill_icons/html.svg" },
-      { skill: "CSS", icon: "src/assets/skill_icons/css.svg" },
-      { skill: "JavaScript", icon: "src/assets/skill_icons/javascript.svg" },
+      { skill: "HTML", icon: "src/assets/skill_icons/html.png" },
+      { skill: "CSS", icon: "src/assets/skill_icons/css.png" },
+      { skill: "JavaScript", icon: "src/assets/skill_icons/javascript.png" },
       { skill: "React", icon: "/react.svg" },
       { skill: "firebase", icon: "src/assets/skill_icons/firebase.png" },
-      { skill: "Material UI", icon: "src/assets/skill_icons/material-ui.svg" },
-      { skill: "Python", icon: "src/assets/skill_icons/python.svg" },
-      { skill: "C++", icon: "src/assets/skill_icons/cpp.svg" },
-      { skill: "Java", icon: "src/assets/skill_icons/java.svg" },
-      { skill: "Robotics", icon: "src/assets/skill_icons/robotics.svg" },
-      { skill: "Robot Operating System (ROS)", icon: "src/assets/skill_icons/ros.svg" },
-      { skill: "OpenCV", icon: "src/assets/skill_icons/computer-vision.svg" },
-      { skill: "Arduino", icon: "src/assets/skill_icons/arduino.svg" },
-      { skill: "Git", icon: "src/assets/skill_icons/git.svg" },
-      { skill: "Docker", icon: "src/assets/skill_icons/docker.svg" },
+      { skill: "Material UI", icon: "/mui.png" },
+      { skill: "Python", icon: "src/assets/skill_icons/python.png" },
+      { skill: "C++", icon: "src/assets/skill_icons/cpp.png" },
+      { skill: "Java", icon: "src/assets/skill_icons/java.png" },
+      { skill: "Robotics", icon: "src/assets/skill_icons/robotics.png" },
+      { skill: "Robot Operating System (ROS)", icon: "src/assets/skill_icons/ros.png" },
+      { skill: "OpenCV", icon: "src/assets/skill_icons/openCV.png" },
+      { skill: "Arduino", icon: "src/assets/skill_icons/arduino.png" },
+      { skill: "Git", icon: "src/assets/skill_icons/git.png" },
+      { skill: "Docker", icon: "src/assets/skill_icons/docker.png" },
    ]
 
    const skillComponent = (skill, icon) => {
@@ -40,7 +40,7 @@ function About() {
                   height: '40px',
                }}
             >
-               <Avatar src={icon} alt={skill} sx={{ width: 25, height: 25, marginRight: 2 }} />
+               <Box component="img" src={icon} alt={skill} sx={{ width: 25, height: 25, marginRight: 2 }} />
                <Typography variant="h6" sx={{ color: theme.palette.text.primary, fontSize: '1rem' }}>
                   {skill}
                </Typography>
@@ -118,7 +118,7 @@ function About() {
                </Typography>
             </Box>
             <Box component="img"
-               src="src\assets\profile_picture.jpg"
+               src="\profile_picture.jpg"
                alt="Profile"
                sx={{
                   width: { xs: '50px', sm: '200px', md: '350px' },

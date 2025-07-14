@@ -7,6 +7,7 @@ import Typography from '@mui/material/Typography';
 import { styled } from '@mui/material/styles';
 import viteIcon from '/vite.svg';
 import reactIcon from '/react.svg';
+import MUIIcon from '/mui.png';
 import {useTheme} from '@mui/material/styles';
 import EmailIcon from '@mui/icons-material/Email';
 import Slide from '@mui/material/Slide';
@@ -39,6 +40,10 @@ const ReactLogo = () => (
 
 const ViteLogo = () => (
    <img src={viteIcon} alt="Vite logo" style={{height: "0.75rem", marginLeft: "0.25rem", marginRight: "0.25rem"}}/>
+);
+
+const MUILogo = () => (
+   <img src={MUIIcon} alt="Material UI logo" style={{height: "0.75rem", marginLeft: "0.25rem", marginRight: "0.25rem"}}/>
 );
 
 function SlideTransition(props) {
@@ -123,7 +128,7 @@ function Footer() {
                )}
                {footerText(
                   <>
-                     Utilized <Link href="https://mui.com/" target="_blank" rel="noopener noreferrer" sx={{color: theme.palette.text.secondary, textDecorationColor: theme.palette.text.secondary}}>Material UI</Link>
+                     Utilized <MUILogo /><Link href="https://mui.com/" target="_blank" rel="noopener noreferrer" sx={{color: theme.palette.text.secondary, textDecorationColor: theme.palette.text.secondary}}>Material UI</Link>
                   </>
                )}
             </Box>
