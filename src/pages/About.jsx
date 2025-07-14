@@ -8,7 +8,7 @@ function About() {
       { skill: "HTML", icon: "src/assets/skill_icons/html.svg" },
       { skill: "CSS", icon: "src/assets/skill_icons/css.svg" },
       { skill: "JavaScript", icon: "src/assets/skill_icons/javascript.svg" },
-      { skill: "React", icon: "src/assets/skill_icons/react.svg" },
+      { skill: "React", icon: "/react.svg" },
       { skill: "firebase", icon: "src/assets/skill_icons/firebase.png" },
       { skill: "Material UI", icon: "src/assets/skill_icons/material-ui.svg" },
       { skill: "Python", icon: "src/assets/skill_icons/python.svg" },
