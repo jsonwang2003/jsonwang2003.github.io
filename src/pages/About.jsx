@@ -5,26 +5,36 @@ import { useTheme } from '@mui/material/styles';
 function About() {
    const theme = useTheme();
    const skills = [
-      { skill: "HTML", icon: "src/assets/skill_icons/html.png" },
-      { skill: "CSS", icon: "src/assets/skill_icons/css.png" },
-      { skill: "JavaScript", icon: "src/assets/skill_icons/javascript.png" },
-      { skill: "React", icon: "/react.svg" },
-      { skill: "firebase", icon: "src/assets/skill_icons/firebase.png" },
-      { skill: "Material UI", icon: "/mui.png" },
-      { skill: "Python", icon: "src/assets/skill_icons/python.png" },
-      { skill: "C++", icon: "src/assets/skill_icons/cpp.png" },
-      { skill: "Java", icon: "src/assets/skill_icons/java.png" },
-      { skill: "Robotics", icon: "src/assets/skill_icons/robotics.png" },
-      { skill: "Robot Operating System (ROS)", icon: "src/assets/skill_icons/ros.png" },
-      { skill: "OpenCV", icon: "src/assets/skill_icons/openCV.png" },
-      { skill: "Arduino", icon: "src/assets/skill_icons/arduino.png" },
-      { skill: "Git", icon: "src/assets/skill_icons/git.png" },
-      { skill: "Docker", icon: "src/assets/skill_icons/docker.png" },
+      { skill: "HTML", icon: "src/assets/skill_icons/html.png", proficiency: 4, projects: [], startYear: 2022},
+      { skill: "CSS", icon: "src/assets/skill_icons/css.png", proficiency: 0, projects: [], startYear: 0 },
+      { skill: "JavaScript", icon: "src/assets/skill_icons/javascript.png", proficiency: 0, projects: [], startYear: 0 },
+      { skill: "React", icon: "/react.svg", proficiency: 0, projects: [], startYear: 0 },
+      { skill: "firebase", icon: "src/assets/skill_icons/firebase.png", proficiency: 0, projects: [], startYear: 0 },
+      { skill: "Material UI", icon: "/mui.png", proficiency: 0, projects: [], startYear: 0 },
+      { skill: "Python", icon: "src/assets/skill_icons/python.png", proficiency: 0, projects: [], startYear: 0 },
+      { skill: "C++", icon: "src/assets/skill_icons/cpp.png", proficiency: 0, projects: [], startYear: 0 },
+      { skill: "Java", icon: "src/assets/skill_icons/java.png", proficiency: 0, projects: [], startYear: 0 },
+      { skill: "Robotics", icon: "src/assets/skill_icons/robotics.png", proficiency: 0, projects: [], startYear: 0 },
+      { skill: "Robot Operating System (ROS)", icon: "src/assets/skill_icons/ros.png", proficiency: 0, projects: [], startYear: 0 },
+      { skill: "OpenCV", icon: "src/assets/skill_icons/openCV.png", proficiency: 0, projects: [], startYear: 0 },
+      { skill: "Arduino", icon: "src/assets/skill_icons/arduino.png", proficiency: 0, projects: [], startYear: 0 },
+      { skill: "Git", icon: "src/assets/skill_icons/git.png", proficiency: 0, projects: [], startYear: 0 },
+      { skill: "Docker", icon: "src/assets/skill_icons/docker.png", proficiency: 0, projects: [], startYear: 0 },
    ]
 
-   const skillComponent = (skill, icon) => {
+   const skillComponent = (skill, icon, proficiency, projects, startYear, key) => {
+      const [openDetail, setOpenDetail] = React.useState(false);
+
+      const toggleOpenDetail = () => {
+         setOpenDetail(true);
+      }
+
+      const toggleCloseDetail = () => {
+         setOpenDetail(false);
+      }
+
       return (
-         <Grid item xs={12} sm={6} md={4}>
+         <Grid item key={key}>
             <Box
                sx={{
                   display: 'flex',
@@ -38,6 +48,7 @@ function About() {
                   borderStyle: 'solid',
                   borderRadius: '20px',
                   height: '40px',
+                  onClick: toggleOpenDetail,
                }}
             >
                <Box component="img" src={icon} alt={skill} sx={{ width: 25, height: 25, marginRight: 2 }} />
@@ -148,7 +159,8 @@ function About() {
          <Divider sx={{ backgroundColor: theme.palette.text.primary, marginBottom: 2 }} />
          <Grid
             container
-            spacing={4}
+            columnSpacing={8}
+            rowSpacing={4}
             sx={{
                justifyContent: 'space-evenly',
                alignItems: 'center',
@@ -156,15 +168,7 @@ function About() {
             }}
          >
             {skills.map((skillObj, idx) => (
-               <Grid
-                  item
-                  xs={12}
-                  sm={6}
-                  md={4}
-                  key={idx}
-               >
-                  {skillComponent(skillObj.skill, skillObj.icon)}
-               </Grid>
+               skillComponent(skillObj.skill, skillObj.icon, skillObj.proficiency, skillObj.projects, skillObj.startYear, idx)
             ))}
          </Grid>
       </Container>
