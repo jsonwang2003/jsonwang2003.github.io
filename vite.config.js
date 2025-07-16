@@ -19,9 +19,20 @@ export default defineConfig({
       },
       // Reduce chunk size warnings
       chunkSizeWarningLimit: 1000,
-      // Enable source maps for debugging but compress
-      sourcemap: false,
+      // Enable source maps for production debugging on Vercel
+      sourcemap: true,
       // Use default minifier (esbuild) which is faster and included
       minify: 'esbuild',
+      // Optimize for Vercel deployment
+      target: 'esnext',
+   },
+   // Configure for better development experience
+   server: {
+      port: 3000,
+      open: true,
+   },
+   // Configure for Vercel preview deployments
+   preview: {
+      port: 3000,
    },
 })

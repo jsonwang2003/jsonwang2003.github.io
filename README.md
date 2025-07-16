@@ -2,7 +2,9 @@
 
 A modern, responsive portfolio website showcasing my professional journey, skills, and projects. Built with cutting-edge web technologies for optimal performance and user experience.
 
-🌐 **Live Site**: [https://jsonwang2003.github.io](https://jsonwang2003.github.io)
+🌐 **Live Site**: [https://jsonwang2003.vercel.app](https://jsonwang2003.vercel.app)
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fjsonwang2003%2Fjsonwang2003.github.io)
 
 ## ✨ Features
 
@@ -34,11 +36,8 @@ A modern, responsive portfolio website showcasing my professional journey, skill
 │   ├── theme.jsx          # Material-UI theme configuration
 │   ├── App.jsx            # Main app component
 │   └── main.jsx           # App entry point
-├── .github/
-│   └── workflows/
-│       └── deploy.yml     # GitHub Actions deployment
-├── deploy.ps1             # PowerShell deployment script
-├── deploy.bat             # Batch deployment script (deprecated)
+├── vercel.json            # Vercel deployment configuration
+├── .env.example           # Environment variables template
 └── vite.config.js         # Vite configuration
 ```
 
@@ -60,6 +59,7 @@ A modern, responsive portfolio website showcasing my professional journey, skill
 
 - **ESLint** - Code linting and quality assurance
 - **GitHub Actions** - Automated CI/CD pipeline
+- **Vercel** - Modern deployment platform with global CDN
 - **GitHub Pages** - Static site hosting
 
 ## 🚀 Quick Start
@@ -176,46 +176,57 @@ Update personal information in the respective page components:
 
 ## 🚀 Deployment
 
-### Automatic Deployment (Recommended)
+### Automatic Deployment with Vercel (Recommended)
 
-The project uses GitHub Actions for automatic deployment:
+The project is configured for automatic deployment with Vercel:
 
-1. **Push to main branch**
+1. **Connect your repository to Vercel:**
+   - Go to [vercel.com](https://vercel.com) and sign in with GitHub
+   - Import your repository
+   - Vercel will automatically detect the Vite framework
 
-   ```bash
-   git add .
-   git commit -m "Your commit message"
-   git push origin main
-   ```
-
-2. **GitHub Actions will automatically:**
+2. **Every push to main branch will automatically:**
    - Install dependencies
-   - Build the project
-   - Deploy to GitHub Pages
+   - Build the project using `npm run build`
+   - Deploy to Vercel's global CDN
+
+3. **Features included:**
+   - Automatic HTTPS
+   - Global CDN
+   - Preview deployments for pull requests
+   - Custom domains support
 
 ### Manual Deployment
 
-**Using PowerShell (Windows):**
+**Using Vercel CLI:**
 
-```powershell
-.\deploy.ps1
+```bash
+# Install Vercel CLI globally
+npm install -g vercel
+
+# Deploy to production
+npm run deploy
+
+# Deploy to preview
+npm run deploy-dev
 ```
 
 **Using npm commands:**
 
 ```bash
 npm run build
-# Then manually deploy the dist/ folder
+# Then manually deploy the dist/ folder to your hosting provider
 ```
 
-## 🌐 GitHub Pages Configuration
+## 🌐 Vercel Configuration
 
-The site is configured for GitHub Pages deployment:
+The site is optimized for Vercel deployment:
 
-- **Source**: GitHub Actions workflow
-- **Custom Domain**: Available for configuration
-- **HTTPS**: Automatically enabled
-- **Build Process**: Automated via `.github/workflows/deploy.yml`
+- **Framework**: Automatically detected as Vite
+- **Build Command**: `npm run build`
+- **Output Directory**: `dist`
+- **Node Version**: 18.x (recommended)
+- **SPA Routing**: Configured via `vercel.json`
 
 ## 📱 Responsive Design
 
