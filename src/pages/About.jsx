@@ -5,21 +5,21 @@ import { useTheme } from '@mui/material/styles';
 function About() {
    const theme = useTheme();
    const skills = [
-      { skill: "HTML", icon: "src/assets/skill_icons/html.png", proficiency: 4, projects: [], startYear: 2022},
-      { skill: "CSS", icon: "src/assets/skill_icons/css.png", proficiency: 0, projects: [], startYear: 0 },
-      { skill: "JavaScript", icon: "src/assets/skill_icons/javascript.png", proficiency: 0, projects: [], startYear: 0 },
+      { skill: "HTML", icon: "/skill_icons/html.png", proficiency: 4, projects: [], startYear: 2022},
+      { skill: "CSS", icon: "/skill_icons/css.png", proficiency: 0, projects: [], startYear: 0 },
+      { skill: "JavaScript", icon: "/skill_icons/javascript.png", proficiency: 0, projects: [], startYear: 0 },
       { skill: "React", icon: "/react.svg", proficiency: 0, projects: [], startYear: 0 },
-      { skill: "firebase", icon: "src/assets/skill_icons/firebase.png", proficiency: 0, projects: [], startYear: 0 },
+      { skill: "firebase", icon: "/skill_icons/firebase.png", proficiency: 0, projects: [], startYear: 0 },
       { skill: "Material UI", icon: "/mui.png", proficiency: 0, projects: [], startYear: 0 },
-      { skill: "Python", icon: "src/assets/skill_icons/python.png", proficiency: 0, projects: [], startYear: 0 },
-      { skill: "C++", icon: "src/assets/skill_icons/cpp.png", proficiency: 0, projects: [], startYear: 0 },
-      { skill: "Java", icon: "src/assets/skill_icons/java.png", proficiency: 0, projects: [], startYear: 0 },
-      { skill: "Robotics", icon: "src/assets/skill_icons/robotics.png", proficiency: 0, projects: [], startYear: 0 },
-      { skill: "Robot Operating System (ROS)", icon: "src/assets/skill_icons/ros.png", proficiency: 0, projects: [], startYear: 0 },
-      { skill: "OpenCV", icon: "src/assets/skill_icons/openCV.png", proficiency: 0, projects: [], startYear: 0 },
-      { skill: "Arduino", icon: "src/assets/skill_icons/arduino.png", proficiency: 0, projects: [], startYear: 0 },
-      { skill: "Git", icon: "src/assets/skill_icons/git.png", proficiency: 0, projects: [], startYear: 0 },
-      { skill: "Docker", icon: "src/assets/skill_icons/docker.png", proficiency: 0, projects: [], startYear: 0 },
+      { skill: "Python", icon: "/skill_icons/python.png", proficiency: 0, projects: [], startYear: 0 },
+      { skill: "C++", icon: "/skill_icons/cpp.png", proficiency: 0, projects: [], startYear: 0 },
+      { skill: "Java", icon: "/skill_icons/java.png", proficiency: 0, projects: [], startYear: 0 },
+      { skill: "Robotics", icon: "/skill_icons/robotics.png", proficiency: 0, projects: [], startYear: 0 },
+      { skill: "Robot Operating System (ROS)", icon: "/skill_icons/ros.png", proficiency: 0, projects: [], startYear: 0 },
+      { skill: "OpenCV", icon: "/skill_icons/openCV.png", proficiency: 0, projects: [], startYear: 0 },
+      { skill: "Arduino", icon: "/skill_icons/arduino.png", proficiency: 0, projects: [], startYear: 0 },
+      { skill: "Git", icon: "/skill_icons/git.png", proficiency: 0, projects: [], startYear: 0 },
+      { skill: "Docker", icon: "/skill_icons/docker.png", proficiency: 0, projects: [], startYear: 0 },
    ]
 
    const skillComponent = (skill, icon, proficiency, projects, startYear, key) => {
