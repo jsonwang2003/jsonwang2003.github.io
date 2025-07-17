@@ -32,3 +32,6 @@ function Education() {
 }
 
 export default Education;
+
+npm install
+npm run dev
