@@ -94,7 +94,7 @@ function Footer() {
          component="footer" 
          maxWidth={false}
          sx={{
-            backgroundColor: theme.palette.secondary.main,
+            backgroundColor: theme.palette.primary.main,
             width: '100%',
             minHeight: '20vh',
             display: 'flex',

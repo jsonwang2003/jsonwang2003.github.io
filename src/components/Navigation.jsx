@@ -55,7 +55,7 @@ function Navigation() {
          component="nav"
          maxWidth={false}
          sx={{
-            backgroundColor: theme.palette.secondary.main,
+            backgroundColor: theme.palette.primary.main,
             position: 'fixed',
             top: 0,
             zIndex: theme.zIndex.appBar,
@@ -124,7 +124,7 @@ function Navigation() {
                   justifyContent: 'center',
                   padding: '20px',
                   boxSizing: 'border-box',
-                  backgroundColor: theme.palette.secondary.main,
+                  backgroundColor: theme.palette.primary.main,
                   position: 'absolute',
                   top: '80px',
                   left: 0,

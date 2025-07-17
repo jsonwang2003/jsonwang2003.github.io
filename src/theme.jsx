@@ -1,43 +1,32 @@
+import { blue } from '@mui/material/colors';
 import { createTheme } from '@mui/material/styles';
 
 const getTheme = (mode) => createTheme({
    palette: {
       mode,
       ...(mode === 'light' ? {
-         primary: {
-            main: '#86d1cc',
-         },
-         secondary: {
-            main: "rgba(255, 149, 0, 0.95)",
-         },
+         primary: blue,
          background: {
             default: '#ffffff',
-            paper: '#ffffff',
+            paper: '#f5f5f5',
          },
          text: {
             primary: '#212121',
             secondary: '#212121',
          },
-         navigationBorder: {
-            main: 'rgb(0, 116, 211)'
-         }
+         navigationBorder: { main: '#212121' }
       } : {
-         primary: {
-            main: '#FF6E1A',
-         },
-         secondary: {
-            main: '#1a1a1a',
-         },
+         primary: '#1a1a1a',
          background: {
             default: '#0a0a0a',
-            paper: '#1a1a1a',
+            paper: '#',
          },
          text: {
             primary: '#ffffff',
             secondary: '#aaaaaa',
          },
          navigationBorder: {
-            main: '#ffffffff',
+            main: '#ffffff',
          }
       }),
    },
