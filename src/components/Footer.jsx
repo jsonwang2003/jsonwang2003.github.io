@@ -77,7 +77,7 @@ function Footer() {
    const footerText = (message) => {
       return (
          <Typography variant="caption" gutterBottom sx={{ 
-            color: theme.palette.text.secondary, 
+            color: theme.palette.text.primary, 
             display: 'block',
             whiteSpace: { xs: 'normal', md: 'nowrap' },
             textOverflow: { xs: 'unset', md: 'ellipsis' },
@@ -121,14 +121,14 @@ function Footer() {
                {footerText(
                   <>
                      Built with<ReactLogo />
-                     <Link href="https://reactjs.org/" target="_blank" rel="noopener noreferrer" sx={{color: theme.palette.text.secondary, textDecorationColor: theme.palette.text.secondary}}>React</Link> +
-                     <ViteLogo /><Link href="https://vitejs.dev/" target="_blank" rel="noopener noreferrer" sx={{color: theme.palette.text.secondary, textDecorationColor: theme.palette.text.secondary}}>Vite</Link>
-                     , hosted on <Link href="https://jsonwang2003.github.io/" target="_blank" rel="noopener noreferrer" sx={{color: theme.palette.text.secondary, textDecorationColor: theme.palette.text.secondary}}>Github Pages</Link>
+                     <Link href="https://reactjs.org/" target="_blank" rel="noopener noreferrer" sx={{color: theme.palette.text.primary, textDecorationColor: theme.palette.text.primary}}>React</Link> +
+                     <ViteLogo /><Link href="https://vitejs.dev/" target="_blank" rel="noopener noreferrer" sx={{color: theme.palette.text.primary, textDecorationColor: theme.palette.text.primary}}>Vite</Link>
+                     , hosted on <Link href="https://jsonwang2003.github.io/" target="_blank" rel="noopener noreferrer" sx={{color: theme.palette.text.primary, textDecorationColor: theme.palette.text.primary}}>Github Pages</Link>
                   </>
                )}
                {footerText(
                   <>
-                     Utilized <MUILogo /><Link href="https://mui.com/" target="_blank" rel="noopener noreferrer" sx={{color: theme.palette.text.secondary, textDecorationColor: theme.palette.text.secondary}}>Material UI</Link>
+                     Utilized <MUILogo /><Link href="https://mui.com/" target="_blank" rel="noopener noreferrer" sx={{color: theme.palette.text.primary, textDecorationColor: theme.palette.text.primary}}>Material UI</Link>
                   </>
                )}
             </Box>
@@ -147,10 +147,10 @@ function Footer() {
                      justifyContent: 'space-evenly',
                      alignItems: 'center'
                   }}>
-                     <Link style={{color: theme.palette.text.secondary}} href="https://github.com/jsonwang2003" target="_blank" rel="noopener noreferrer">
+                     <Link style={{color: theme.palette.text.primary}} href="https://github.com/jsonwang2003" target="_blank" rel="noopener noreferrer">
                         <StyledGitHubIcon />
                      </Link>
-                     <Link style={{color: theme.palette.text.secondary}} href="https://www.linkedin.com/in/chia-sheng-wang/" target="_blank" rel="noopener noreferrer">
+                     <Link style={{color: theme.palette.text.primary}} href="https://www.linkedin.com/in/chia-sheng-wang/" target="_blank" rel="noopener noreferrer">
                         <StyledLinkedInIcon />
                      </Link>
                      <Link>

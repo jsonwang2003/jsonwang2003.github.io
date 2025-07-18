@@ -57,35 +57,35 @@ function About() {
                   sx={{
                      width: '20%',
                      height: '3px',
-                     backgroundColor: proficiency > 0 ? theme.palette.text.primary : theme.palette.text.secondary,
+                     backgroundColor: proficiency > 0 ? theme.palette.skillBar.fill : theme.palette.skillBar.default,
                   }}
                />
                <Box
                   sx={{
                      width: '20%',
                      height: '3px',
-                     backgroundColor: proficiency > 1 ? theme.palette.text.primary : theme.palette.text.secondary,
+                     backgroundColor: proficiency > 1 ? theme.palette.skillBar.fill : theme.palette.skillBar.default,
                   }}
                />
                <Box
                   sx={{
                      width: '20%',
                      height: '3px',
-                     backgroundColor: proficiency > 2 ? theme.palette.text.primary : theme.palette.text.secondary,
+                     backgroundColor: proficiency > 2 ? theme.palette.skillBar.fill : theme.palette.skillBar.default,
                   }}
                />
                <Box
                   sx={{
                      width: '20%',
                      height: '3px',
-                     backgroundColor: proficiency > 3 ? theme.palette.text.primary : theme.palette.text.secondary,
+                     backgroundColor: proficiency > 3 ? theme.palette.skillBar.fill : theme.palette.skillBar.default,
                   }}
                />
                <Box
                   sx={{
                      width: '20%',
                      height: '3px',
-                     backgroundColor: proficiency > 4 ? theme.palette.text.primary : theme.palette.text.secondary,
+                     backgroundColor: proficiency > 4 ? theme.palette.skillBar.fill : theme.palette.skillBar.default,
                   }}
                />
             </Box>
@@ -203,7 +203,7 @@ function About() {
                <Typography
                   variant="body1"
                   sx={{
-                     color: theme.palette.text.secondary,
+                     color: theme.palette.text.primary,
                      textAlign: 'left',
                      marginBottom: 2,
                   }}
@@ -233,19 +233,21 @@ function About() {
             />
          </Box>
          {/* Create a wave animation */}
-         <Typography
-            variant="h1"
-            sx={{
-               marginBottom: 2,
-               color: theme.palette.text.primary,
-               fontSize: '3rem',
-               fontFamily: 'sans-serif',
-               ml: 5
-            }}
-         >
-            Skills
-         </Typography>
-         <Divider sx={{ backgroundColor: theme.palette.text.primary, marginBottom: 2 }} />
+         <Box>
+            <Typography
+               variant="h1"
+               sx={{
+                  marginBottom: 2,
+                  color: theme.palette.text.primary,
+                  fontSize: '3rem',
+                  fontFamily: 'sans-serif',
+                  ml: 5
+               }}
+            >
+               Skills
+            </Typography>
+            <Divider sx={{ backgroundColor: theme.palette.text.primary, marginBottom: 2 }} />
+         </Box>
          <Grid
             container
             columnSpacing={8}

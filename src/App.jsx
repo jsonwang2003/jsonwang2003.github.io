@@ -7,6 +7,7 @@ import Navigation from './components/Navigation';
 import Home from './pages/Home';
 import About from './pages/About';
 import Education from './pages/Education';
+import Portfolio from './pages/Portfolio';
 import Projects from './pages/Projects';
 import Footer from './components/Footer';
 import getTheme from './theme';
@@ -34,6 +35,7 @@ function AppContent() {
                   <Routes>
                      <Route path="/" element={<Home />} />
                      <Route path="/about" element={<About />} />
+                     <Route path="/portfolio" element={<Portfolio />} />
                      <Route path="/education" element={<Education />} />
                      <Route path="/projects" element={<Projects />} />
                      <Route path="*" element={<Home />} />

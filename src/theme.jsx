@@ -1,32 +1,42 @@
-import { blue } from '@mui/material/colors';
+import { orange } from '@mui/material/colors';
 import { createTheme } from '@mui/material/styles';
 
 const getTheme = (mode) => createTheme({
    palette: {
       mode,
       ...(mode === 'light' ? {
-         primary: blue,
+         primary: orange,
          background: {
             default: '#ffffff',
-            paper: '#f5f5f5',
+            paper: '#f2f2f2ff',
          },
          text: {
             primary: '#212121',
-            secondary: '#212121',
+            secondary: '#363636ff',
          },
-         navigationBorder: { main: '#212121' }
+         navigationBorder: { 
+            main: '#212121',
+         },
+         skillBar: {
+            default: '#bcbcbcff',
+            fill: '#212121'
+         }
       } : {
-         primary: '#1a1a1a',
+         primary: { main: '#1a1a1a' },
          background: {
             default: '#0a0a0a',
-            paper: '#',
+            paper: '#1a1a1a',
          },
          text: {
             primary: '#ffffff',
-            secondary: '#aaaaaa',
+            secondary: '#a5a5a5ff',
          },
          navigationBorder: {
             main: '#ffffff',
+         },
+         skillBar: {
+            default: '#ffffff',
+            fill: '#a5a5a5ff'
          }
       }),
    },
