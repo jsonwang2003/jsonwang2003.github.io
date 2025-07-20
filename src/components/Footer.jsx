@@ -5,9 +5,6 @@ import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import { styled } from '@mui/material/styles';
-import viteIcon from '/vite.svg';
-import reactIcon from '/react.svg';
-import MUIIcon from '/mui.png';
 import {useTheme} from '@mui/material/styles';
 import EmailIcon from '@mui/icons-material/Email';
 import Slide from '@mui/material/Slide';
@@ -35,15 +32,15 @@ const StyledLinkedInIcon = createStyledIcon(LinkedInIcon, "#3466c8");
 const StyledEmailIcon = createStyledIcon(EmailIcon, "#FFFFFF");
 
 const ReactLogo = () => (
-   <img src={reactIcon} alt="React logo" style={{height: "0.75rem", marginLeft: "0.25rem", marginRight: "0.25rem"}}/>
+   <img src={'/skill_icons/react.svg'} alt="React logo" style={{height: "0.75rem", marginLeft: "0.25rem", marginRight: "0.25rem"}}/>
 );
 
 const ViteLogo = () => (
-   <img src={viteIcon} alt="Vite logo" style={{height: "0.75rem", marginLeft: "0.25rem", marginRight: "0.25rem"}}/>
+   <img src={'/skill_icons/vite.svg'} alt="Vite logo" style={{height: "0.75rem", marginLeft: "0.25rem", marginRight: "0.25rem"}}/>
 );
 
 const MUILogo = () => (
-   <img src={MUIIcon} alt="Material UI logo" style={{height: "0.75rem", marginLeft: "0.25rem", marginRight: "0.25rem"}}/>
+   <img src={'/skill_icons/mui.png'} alt="Material UI logo" style={{height: "0.75rem", marginLeft: "0.25rem", marginRight: "0.25rem"}}/>
 );
 
 function SlideTransition(props) {

@@ -35,8 +35,8 @@ const getTheme = (mode) => createTheme({
             main: '#ffffff',
          },
          skillBar: {
-            default: '#ffffff',
-            fill: '#a5a5a5ff'
+            fill: '#ffffff',
+            default: '#3d3d3dff'
          }
       }),
    },
