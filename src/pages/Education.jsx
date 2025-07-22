@@ -3,7 +3,7 @@ import {Timeline, TimelineItem, TimelineSeparator, TimelineConnector, TimelineCo
 import {timelineItemClasses} from '@mui/lab/TimelineItem';
 import React from 'react';
 import { useTheme } from '@mui/material/styles';
-import { Link } from 'react-router-dom';
+import SectionTitle from '../components/SectionTitle';
 import LinkIcon from '@mui/icons-material/Link';
 
 function Education() {
@@ -90,7 +90,7 @@ function Education() {
             {
                logo: '/OCC/OC_Robotics_Logo.png',
                name: 'OC Robotics',
-               description: "Contribute to engineering projects at the intersection of artificial intelligence, robotics," + 
+               description: "\tContribute to engineering projects at the intersection of artificial intelligence, robotics," + 
                   " and aerospace as part of an on-campus student organization at OCC and a collaborative multi-college research team.",
                status: 'Computer Vision && Software Lead',
                link: '',
@@ -367,21 +367,7 @@ function Education() {
             boxSizing: 'border-box',
          }}
       >
-         <Box>
-            <Typography
-               variant="h1"
-               sx={{
-                  marginBottom: 2,
-                  color: theme.palette.text.primary,
-                  fontSize: '3rem',
-                  fontFamily: 'sans-serif',
-                  ml: 5
-               }}
-            >
-               Education
-            </Typography>
-            <Divider sx={{ backgroundColor: theme.palette.text.primary, marginBottom: 2 }}/>
-         </Box>
+         <SectionTitle title="Education" />
          <Timeline
             // making the timeline align to the left
             sx={{

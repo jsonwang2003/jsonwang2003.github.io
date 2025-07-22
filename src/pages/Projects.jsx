@@ -1,5 +1,6 @@
 import { Container, Box, Typography, Divider } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
+import SectionTitle from '../components/SectionTitle';
 
 function Projects() {
    const theme = useTheme();
@@ -12,21 +13,7 @@ function Projects() {
             boxSizing: 'border-box',
          }}
       >
-         <Box>
-            <Typography
-               variant="h1"
-               sx={{
-                  marginBottom: 2,
-                  color: theme.palette.text.primary,
-                  fontSize: '3rem',
-                  fontFamily: 'sans-serif',
-                  ml: 5
-               }}
-            >
-               Projects
-            </Typography>
-            <Divider sx={{ backgroundColor: theme.palette.text.primary, marginBottom: 2 }}/>
-         </Box>
+         <SectionTitle title="Projects" />
       </Container>
    );
 }

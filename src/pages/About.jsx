@@ -3,6 +3,7 @@ import { Container, Box, Typography, Divider, Grid, Button, useMediaQuery } from
 import { useTheme } from '@mui/material/styles';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
+import SectionTitle from '../components/SectionTitle';
 
 function About() {
    const theme = useTheme();
@@ -129,21 +130,7 @@ function About() {
             boxSizing: 'border-box',
          }}
       >
-         <Box>
-            <Typography
-               variant="h1"
-               sx={{
-                  marginBottom: 2,
-                  color: theme.palette.text.primary,
-                  fontSize: {xs: '1.8rem', sm: '2.5rem', md: '3rem'},
-                  fontFamily: 'sans-serif',
-                  ml: 5
-               }}
-            >
-               About Me
-            </Typography>
-            <Divider sx={{ backgroundColor: theme.palette.text.primary, marginBottom: 2 }}/>
-         </Box>
+         <SectionTitle title="About Me" />
          <Box
             sx={{
                display: 'flex',
@@ -208,21 +195,7 @@ function About() {
             />
          </Box>
          {/* Create a wave animation */}
-         <Box>
-            <Typography
-               variant="h1"
-               sx={{
-                  marginBottom: 2,
-                  color: theme.palette.text.primary,
-                  fontSize: {xs: '1.8rem', sm: '2.5rem', md: '3rem'},
-                  fontFamily: 'sans-serif',
-                  ml: 5
-               }}
-            >
-               Skills
-            </Typography>
-            <Divider sx={{ backgroundColor: theme.palette.text.primary, marginBottom: 2 }} />
-         </Box>
+         <SectionTitle title="Skills" />
          <Box
             sx={{
                maxHeight: showAllSkills ? '1000px' : '40px',
