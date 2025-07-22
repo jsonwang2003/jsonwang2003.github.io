@@ -62,19 +62,62 @@ const getTheme = (mode) => createTheme({
       }
    },
    typography: {
-      fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+      fontFamily: 'sans-serif',
       h1: {
-         fontSize: 24,
+         fontSize: '3rem',
          fontWeight: 1000,
          lineHeight: 1.5,
          letterSpacing: '0.01562em',
       },
-      p: {
+      h2: {
+         fontSize: '2.5rem',
+         fontWeight: 1000,
+         lineHeight: 1.5,
+         letterSpacing: '0.01562em',
+      },
+      h3: {
+         fontSize: '1.8rem',
+         fontWeight: 1000,
+         lineHeight: 1.5,
+         letterSpacing: '0.01562em',
+      },
+      h4: {
+         fontSize: '1.5rem',
+         fontWeight: 1000,
+         lineHeight: 1.5,
+         letterSpacing: '0.01562em',
+      },
+      h5: {
+         fontSize: '1.2rem',
+         fontWeight: 1000,
+         lineHeight: 1.5,
+         letterSpacing: '0.01562em',
+      },
+      h6: {
          fontSize: '1rem',
+         fontWeight: 1000,
+         lineHeight: 1.5,
+         letterSpacing: '0.01562em',
+      },
+      body1: {
+         fontSize: '1rem',
+         fontWeight: 500,
+         lineHeight: 1.5,
+         letterSpacing: '0.01238em',
+      },
+      caption: {
+         fontSize: '0.875rem',
          fontWeight: 400,
          lineHeight: 1.5,
-         letterSpacing: '0.00938em',
+         letterSpacing: '0.03333em',
       },
+      navigation: {
+         fontSize: '1.25rem',
+         fontWeight: 500,
+         lineHeight: 1.6,
+         letterSpacing: '0.0075em',
+         fontFamily: 'Roboto, sans-serif',
+      }
    },
 });
 

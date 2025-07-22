@@ -29,7 +29,7 @@ function Navigation() {
             }}
             onClick={() => setMenuActive(false)}
          >
-            <Typography variant="h6" sx={{
+            <Typography variant="navigation" sx={{
                '&::after': {
                   content: '""',
                   position: 'absolute',
@@ -166,7 +166,7 @@ function Navigation() {
                      CW
                   </Avatar>
                   <Typography 
-                     variant="h1" 
+                     variant="h4" 
                      sx={{
                         color: theme.palette.text.primary,
                         fontSize: { xs: '1.2rem', sm: '1.3rem', md: '1.5rem' },
@@ -176,7 +176,7 @@ function Navigation() {
                         whiteSpace: 'nowrap',
                         overflow: 'hidden',
                         textOverflow: 'ellipsis',
-                        display: { xs: 'none', sm: 'block' },
+                        display: 'block',
                         transition: 'font-size 0.3s ease',
                      }}
                   >
@@ -206,7 +206,7 @@ function Navigation() {
                CW
             </Avatar>
             <Typography 
-               variant="h1" 
+               variant="h4" 
                sx={{
                   color: theme.palette.text.primary,
                   fontSize: { xs: '1.2rem', sm: '1.3rem', md: '1.5rem' },
@@ -216,7 +216,7 @@ function Navigation() {
                   whiteSpace: 'nowrap',
                   overflow: 'hidden',
                   textOverflow: 'ellipsis',
-                  display: { xs: 'none', sm: 'block' },
+                  display: 'block',
                   transition: 'font-size 0.3s ease',
                }}
             >

@@ -135,7 +135,7 @@ function About() {
                sx={{
                   marginBottom: 2,
                   color: theme.palette.text.primary,
-                  fontSize: '3rem',
+                  fontSize: {xs: '1.8rem', sm: '2.5rem', md: '3rem'},
                   fontFamily: 'sans-serif',
                   ml: 5
                }}
@@ -168,7 +168,8 @@ function About() {
                      color: theme.palette.text.primary,
                      textAlign: 'left',
                      marginBottom: 2,
-                     ml: 3
+                     ml: 3,
+                     fontSize: { xs: '1.5rem', sm: '2.5rem', md: '2.5rem' },
                   }}
                >
                   Chia-Sheng Wang
@@ -179,6 +180,7 @@ function About() {
                      color: theme.palette.text.primary,
                      textAlign: 'left',
                      marginBottom: 2,
+                     fontSize: { xs: '0.875rem', sm: '0.925rem', md: '1rem' }
                   }}
                >
                   I am a current Computer Science Student at the University of California, San Diego (UCSD), 
@@ -212,7 +214,7 @@ function About() {
                sx={{
                   marginBottom: 2,
                   color: theme.palette.text.primary,
-                  fontSize: '3rem',
+                  fontSize: {xs: '1.8rem', sm: '2.5rem', md: '3rem'},
                   fontFamily: 'sans-serif',
                   ml: 5
                }}

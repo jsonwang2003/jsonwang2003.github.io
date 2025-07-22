@@ -43,6 +43,10 @@ const MUILogo = () => (
    <img src={'/skill_icons/mui.png'} alt="Material UI logo" style={{height: "0.75rem", marginLeft: "0.25rem", marginRight: "0.25rem"}}/>
 );
 
+const VercelLogo = () => (
+   <img src={'/skill_icons/vercel.png'} alt="Vercel logo" style={{height: "0.75rem", marginLeft: "0.25rem", marginRight: "0.25rem"}}/>
+);
+
 function SlideTransition(props) {
    return <Slide {...props} direction="up"/>
 }
@@ -117,10 +121,11 @@ function Footer() {
                )}
                {footerText(
                   <>
-                     Built with<ReactLogo />
-                     <Link href="https://reactjs.org/" target="_blank" rel="noopener noreferrer" sx={{color: theme.palette.text.primary, textDecorationColor: theme.palette.text.primary}}>React</Link> +
+                     Built with
+                     <ReactLogo /><Link href="https://reactjs.org/" target="_blank" rel="noopener noreferrer" sx={{color: theme.palette.text.primary, textDecorationColor: theme.palette.text.primary}}>React</Link> +
                      <ViteLogo /><Link href="https://vitejs.dev/" target="_blank" rel="noopener noreferrer" sx={{color: theme.palette.text.primary, textDecorationColor: theme.palette.text.primary}}>Vite</Link>
-                     , hosted on <Link href="https://jsonwang2003.github.io/" target="_blank" rel="noopener noreferrer" sx={{color: theme.palette.text.primary, textDecorationColor: theme.palette.text.primary}}>Github Pages</Link>
+                     , hosted on
+                     <VercelLogo /><Link href="https://examples.vercel.com/home" target="_blank" rel="noopener noreferrer" sx={{color: theme.palette.text.primary, textDecorationColor: theme.palette.text.primary}}>Vercel</Link>
                   </>
                )}
                {footerText(
