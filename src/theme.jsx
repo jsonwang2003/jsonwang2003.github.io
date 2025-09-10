@@ -20,6 +20,11 @@ const getTheme = (mode) => createTheme({
          skillBar: {
             default: '#bcbcbcff',
             fill: '#212121'
+         },
+         status: {
+            complete: '#4caf50',
+            inProgress: '#0088ff',
+            incomplete: '#f44336',
          }
       } : {
          primary: { main: '#1a1a1a' },
@@ -37,6 +42,11 @@ const getTheme = (mode) => createTheme({
          skillBar: {
             fill: '#ffffff',
             default: '#3d3d3dff'
+         },
+         status: {
+            complete: '#4caf50',
+            inProgress: '#0088ff',
+            incomplete: '#f44336',
          }
       }),
    },

@@ -35,9 +35,9 @@ function Navigation() {
                   position: 'absolute',
                   bottom: 0,
                   left: 0,
-                  width: isActive ? '100%' : 0,
+                  width: 0,
                   height: '2px',
-                  backgroundColor: theme.palette.navigationBorder.main,
+                  backgroundColor: theme.palette.text.primary,
                   transition: 'width 0.3s ease-in-out',
                },
                '&:hover::after': {

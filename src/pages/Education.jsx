@@ -20,9 +20,18 @@ function Education() {
             {
                logo: '/UCSD/SIPP_logo.png',
                name: 'SIPP Alumni',
-               description: 'SIPP',
-               link: 'https://sipp.ucsd.edu/',
-               images: ''
+               description: `This summer program has been designed by our team from the University of California, San Diego's Department of Electrical and Computer Engineering to help incoming engineering students prepare for their future job interviews in both the technical and professional space.
+               
+               With the help of our tutor team, faculty, alumni, campus resources, career center, advising office, student organizations, we've customized this summer program experience to best develop students' breadth in technical areas such as python, sensors and systems, and machine learning, as well as professional areas such as resume building, communication, academic planning, research opportunities and more to showcase and develop their skills.`,
+               link: 'https://www.ecesipp.com/',
+               images: '/UCSD/SIPP Flyer 2025.png',
+            },
+            {
+               logo: '/UCSD/Transfer Prep.png',
+               name: 'Transfer Prep Program 2025',
+               description: `Transfer Prep is a 4-day (August 24, 2025 - August 27, 2025) that will provide a once-in-a lifetime opportunity to create strong relationships with peers, build on academic and professional skills for to enhance the UC San Diego experience, and provide mentorship opportunities with current engineering undergraduate transfer students, as well as industry, staff and faculty. The goal of Transfer Prep is for students to receive support in making their transition and build awareness of relevant campus programs and resources.`,
+               link: 'https://sites.google.com/ucsd.edu/transfer-prep-2025/home',
+               images: '/UCSD/Transfer Prep Group Photo.jpg',
             }
          ],
          awards: [],

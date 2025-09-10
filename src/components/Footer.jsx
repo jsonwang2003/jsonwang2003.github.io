@@ -138,9 +138,8 @@ function Footer() {
                display: 'flex',
                justifyContent: 'space-between',
                alignItems: 'center',
-
             }}>
-               <Divider orientation='vertical' flexItem sx={{ backgroundColor: theme.palette.text.secondary, height: '80px' }}/>
+               <Divider orientation="vertical" flexItem sx={{ backgroundColor: theme.palette.text.secondary, height: '80px', display: { xs: 'none', sm: 'block' } }}/>
                <Box sx={{
                   m: 1
                }}>
