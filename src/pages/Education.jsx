@@ -113,7 +113,7 @@ function Education() {
                   " to apply for entry-level positions in C++ programming. A grade of “C” or better is required in all courses. All" + 
                   " courses must be completed at Orange Coast College.",
                outcome: "Program completers will be able to write programs in C++ using classes, flow-of-control and fundamental data structure.",
-               images: '/OCC/CS_C++ Programming_JF_2025_0604_1409_May-1.png',
+               images: '/OCC/cs-cpp-programming-certificate.png',               
                link: 'https://catalog.cccd.edu/orange-coast/pathways/computers-computing/computer-science/c-programming-certificate-specialization/'
             },
             {
