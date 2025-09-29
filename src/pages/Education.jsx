@@ -122,7 +122,7 @@ function Education() {
                   " entry-level positions in Python programming. A grade of “C” or better is required in all courses. All courses must be completed at Orange Coast College.",
                outcome: "Students who complete the program will be able to write programs in Python using classes, flow-of-control, and fundamental" + 
                   " data structure.",
-               images: '/OCC/CS_Python Programming_JF_2025_0604_1407_May-1.png',
+               images: '/OCC/cs-python-programming-certificate.png',
                link: 'https://catalog.cccd.edu/orange-coast/pathways/computers-computing/computer-science/python-programming-certificate-specialization/'
             },
             {
