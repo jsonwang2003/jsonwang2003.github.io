@@ -175,7 +175,7 @@ function About() {
                   and <span style={{ fontWeight: 'bold' }}>Website Development</span>. <br /><br />
                   I have a passion for creatively solving problems and enhancing user experiences through technologies. <br /><br />
                   My journey in computer science has equipped me with skills such as <span style={{ fontWeight: 'bold' }}>programming</span>,  
-                  <span style={{ fontWeight: 'bold' }}>problem-solving</span>, and <span style={{ fontWeight: 'bold' }}>critical thinking</span>. <br /><br />
+                  <span style={{ fontWeight: 'bold' }}> problem-solving</span>, and <span style={{ fontWeight: 'bold' }}>critical thinking</span>. <br /><br />
                   I am eager to apply my knowledge in real-world projects and contribute to the tech community.
                </Typography>
             </Box>

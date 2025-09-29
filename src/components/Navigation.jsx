@@ -105,7 +105,6 @@ function Navigation() {
          >
             {hoverLink("/", "Home")}
             {hoverLink("/about", "About")}
-            {hoverLink("/portfolio", "Portfolio")}
             {hoverLink("/education", "Education")}
             {hoverLink("/projects", "Projects")}
          </Box>
@@ -134,8 +133,7 @@ function Navigation() {
                }}
             >
                {hoverLink("/", "Home")}
-               {hoverLink("/about", "About")}               
-               {hoverLink("/portfolio", "Portfolio")}
+               {hoverLink("/about", "About")}
                {hoverLink("/education", "Education")}
                {hoverLink("/projects", "Projects")}
                <Divider

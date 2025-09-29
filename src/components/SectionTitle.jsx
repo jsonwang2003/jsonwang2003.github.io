@@ -8,6 +8,7 @@ function SectionTitle({ title }) {
             <Typography
                 variant="h1"
                 sx={{
+                    marginTop: '120px',
                     marginBottom: 2,
                     color: theme.palette.text.primary,
                     fontSize: {xs: '1.8rem', sm: '2.5rem', md: '3rem'},
